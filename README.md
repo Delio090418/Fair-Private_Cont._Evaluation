@@ -7,7 +7,7 @@
    
    python -m venv .venv
    
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    
 4. In the file data_paths.py add the corresponding local paths for the data sets.
    
