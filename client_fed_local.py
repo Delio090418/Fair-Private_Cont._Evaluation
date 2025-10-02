@@ -10,8 +10,8 @@ from torchvision.transforms import ToTensor
 import random
 import torch.optim as optim
 from data_configuration import data_clients, commun_test
-from isic import non_iid_data,commun_test_isic 
-from PCam import non_iid_data_pcam, common_test_pcam
+#from isic import non_iid_data,commun_test_isic 
+#from PCam import non_iid_data_pcam, common_test_pcam
 from concurrent.futures import ThreadPoolExecutor
 from torch.utils.data import Subset
 
@@ -249,14 +249,14 @@ class federation:
             data_brain =data_clients(data_name=dataset_name,num_clients=n_cli, alpha=self.alpha,partition_type=self.partition_type)
             test_brain = commun_test(dataset_name)
             return data_brain, test_brain
-        elif dataset_name=="isic":
-            data=non_iid_data(n_clients=self.num_clients, alpha=self.alpha)
-            test=commun_test_isic(data)
-            return data, test
-        elif dataset_name=="pcam":
-            data=non_iid_data_pcam(n_clients=self.num_clients, alpha=self.alpha)
-            test=common_test_pcam(data)
-            return data, test
+        #elif dataset_name=="isic":
+         #   data=non_iid_data(n_clients=self.num_clients, alpha=self.alpha)
+          #  test=commun_test_isic(data)
+           # return data, test
+        #elif dataset_name=="pcam":
+         #   data=non_iid_data_pcam(n_clients=self.num_clients, alpha=self.alpha)
+          #  test=common_test_pcam(data)
+           # return data, test
         else:
             raise ValueError("Unsupported dataset")
         
