@@ -1,7 +1,7 @@
 # To run the code
 1. clode the repository by using.
    
-   github clone https://github.com/Delio090418/Fair-Private_Cont._Evaluation.git.
+   github clone https://github.com/Delio090418/Fair_Private_Contribution_Evaluation.git
    
 2. Install the required packages using the requirements file:
    
